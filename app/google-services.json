@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "581648001361",
+    "project_id": "classdemo-df41b",
+    "storage_bucket": "classdemo-df41b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581648001361:android:21bb83728a88855e1b8b70",
+        "android_client_info": {
+          "package_name": "com.example.firestoreclassdemo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDljxistnbFq2gN-16kffaDqRvXFVI2O0Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
