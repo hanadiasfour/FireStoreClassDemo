@@ -29,11 +29,10 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-private  FirebaseFirestore db;
+    private FirebaseFirestore db;
     private Button read, add;
     private TextView data;
     private EditText name, age, reason;
-
 
 
     @Override
@@ -45,27 +44,19 @@ private  FirebaseFirestore db;
         //setting the views
         setViews();
 
-
-
-
         //initialize the firebase firestore
          db = FirebaseFirestore.getInstance();
-
-
 
 
     }
 
     public void setViews(){
-
         read= findViewById(R.id.read);
         add = findViewById(R.id.add);
         data = findViewById(R.id.datatxt);
         name = findViewById(R.id.nametxt);
         age = findViewById(R.id.agetxt);
         reason = findViewById(R.id.reasontxt);
-
-
     }
 
 
@@ -77,7 +68,7 @@ private  FirebaseFirestore db;
         if(p == null){
             Toast.makeText(this, "Enter all of the Feilds", Toast.LENGTH_SHORT).show();
 
-        } else{
+        }else{
 
             // Add a new document with a generated ID
             db.collection("Patient")
@@ -118,29 +109,19 @@ private  FirebaseFirestore db;
                         }
                     }
                 });
-
     }
 
     public Patient getPatientObject(){
 
-
         if(name.getText().toString().isEmpty() ||age.getText().toString().isEmpty()||reason.getText().toString().isEmpty() ){
             return null;
+            
         }else{
+            
             String n = name.getText().toString();
             String r = reason.getText().toString();
-
-
             int a = Integer.parseInt(age.getText().toString());
             return new Patient(n,a,r);
-
-
         }
-
-
-
     }
-
-
-
 }
